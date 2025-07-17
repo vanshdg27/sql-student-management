@@ -15,4 +15,6 @@ This MySQL-based project manages students, courses, subjects, and their marks. I
 2. Run `sample_data.sql` to insert initial data.
 3. Run `queries.sql` to see key results and the view.
 ## 🔍 Screenshot
-![Screenshot](A_screenshot_of_MySQL_Workbench's_graphical_interf.png)
+
+![Screenshot](https://raw.githubusercontent.com/vanshdg27/sql-student-management/main/A_screenshot_of_MySQL_Workbench's_graphical_interf.png)
+
