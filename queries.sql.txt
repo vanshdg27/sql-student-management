@@ -1,0 +1,21 @@
+USE StudentResultDB;
+
+-- 1. Student-wise average marks
+SELECT s.name AS student, AVG(m.marks_obtained) AS average_marks
+FROM Students s
+JOIN Marks m ON s.student_id = m.student_id
+GROUP BY s.name;
+
+-- 2. Top-performing student
+SELECT s.name AS student, SUM(m.marks_obtained) AS total_marks
+FROM Students s
+JOIN Marks m ON s.student_id = m.student_id
+GROUP BY s.name
+ORDER BY total_marks DESC
+LIMIT 1;
+
+-- 3. View: Students with their course
+CREATE OR REPLACE VIEW StudentCourseView AS
+SELECT s.student_id, s.name, s.email, c.course_name
+FROM Students s
+JOIN Courses c ON s.course_id = c.course_id;
